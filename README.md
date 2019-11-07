@@ -3,11 +3,11 @@
 [Documentation](https://wozitech.asuscomm.com/projects/cv/training)
 
 RESTful API:
-* [GET /] - list all in reverse chronological on date achieved
-* [GET /:id] - returns a specific training record
-* [POST /] - creates a training record; "Authorization" Bearer JWT required
-* [PUT /:id] - updates the training record; "Authorization" Bearer JWT required
-* [DELETE /:id] - delete the training record; "Authorization" Bearer JWT required
+* [GET /api] - list all in reverse chronological on date achieved
+* [GET /api/:id] - returns a specific training record
+* [POST /api] - creates a training record; "Authorization" Bearer JWT required
+* [PUT /api/:id] - updates the training record; "Authorization" Bearer JWT required
+* [DELETE /api/:id] - delete the training record; "Authorization" Bearer JWT required
 
 Training records are store in MongoDB collection "Training".
 

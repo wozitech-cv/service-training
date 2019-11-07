@@ -1,0 +1,34 @@
+swagger: "2.0"
+info:
+  description: WOZiTech CV training REST endpoint
+  version: "1.0.0"
+  title: WOZiTech CV "training" endpoint
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /:
+    get:
+      operationId: "list.training"
+      tags:
+        - "Training"
+      summary: "List of all training records"
+      description: "Training records in reverse chronological order"
+      responses:
+        200:
+          description: "Successful list of training records"
+          schema:
+            type: "array"
+            items:
+              properties:
+                title:
+                  type: "string"
+                acheived:
+                  type: "string"
+                expires:
+                  type: "string"
