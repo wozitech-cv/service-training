@@ -17,18 +17,47 @@ paths:
       operationId: "list.training"
       tags:
         - "Training"
+        - "List"
       summary: "List of all training records"
       description: "Training records in reverse chronological order"
       responses:
         200:
           description: "Successful list of training records"
           schema:
-            type: "array"
+            type: array
             items:
               properties:
+                id:
+                  type: integer
                 title:
-                  type: "string"
+                  type: string
                 acheived:
-                  type: "string"
+                  type: string
                 expires:
-                  type: "string"
+                  type: string
+  /{id}:
+    get:
+      operationId: "get.training"
+      tags:
+        - "Training"
+        - "Get"
+      summary: "List of all training records"
+      description: "Gets a specific training record"
+      parameters:
+        - name: id
+          in: path
+          description: Unique ID for the training record
+          type: string
+          required: True
+      responses:
+        200:
+          description: "The training record"
+          schema:
+            type: object
+            properties:
+              title:
+                type: "string"
+              acheived:
+                type: "string"
+              expires:
+                type: "string"
