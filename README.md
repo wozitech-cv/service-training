@@ -13,8 +13,9 @@ Training records are store in MongoDB collection "Training".
 
 # TODO: 
 1. [GET] - limit, since, total, facetted "scope"
-2. serverlesss framework
-3. Docker file
+2. [POST], [PUT], [DELETE] - authorization (JWT)
+3. serverlesss framework
+4. Docker file
 
 # Dependencies:
 * flask

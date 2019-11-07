@@ -35,13 +35,34 @@ paths:
                   type: string
                 expires:
                   type: string
+    post:
+      operationId: "create.training"
+      tags:
+        - "Training"
+        - "New"
+      summary: "Create the training record"
+      description: "Creates a single training record"
+      responses:
+        200:
+          description: "The training record created"
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              title:
+                type: string
+              acheived:
+                type: string
+              expires:
+                type: string
   /{id}:
     get:
       operationId: "get.training"
       tags:
         - "Training"
         - "Get"
-      summary: "List of all training records"
+      summary: "Returns the training records"
       description: "Gets a specific training record"
       parameters:
         - name: id
@@ -61,3 +82,44 @@ paths:
                 type: "string"
               expires:
                 type: "string"
+    put:
+      operationId: "put.training"
+      tags:
+        - "Training"
+        - "Update"
+      summary: "Updates the training records"
+      description: "Update a specific training record, returns the updated record"
+      parameters:
+        - name: id
+          in: path
+          description: Unique ID for the training record
+          type: string
+          required: True
+      responses:
+        200:
+          description: "The training record"
+          schema:
+            type: object
+            properties:
+              title:
+                type: "string"
+              acheived:
+                type: "string"
+              expires:
+                type: "string"
+    delete:
+      operationId: "delete.training"
+      tags:
+        - "Training"
+        - "Delete"
+      summary: "Deletes the training record"
+      description: "Deletes a specific training record"
+      parameters:
+        - name: id
+          in: path
+          description: Unique ID for the training record
+          type: string
+          required: True
+      responses:
+        204:
+          description: "Success"
