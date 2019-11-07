@@ -1,0 +1,7 @@
+.vscode
+.python
+
+# npm - for nodemon
+node_modules/**
+package-lock.json
+

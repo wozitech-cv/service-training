@@ -1,0 +1,29 @@
+{
+  "name": "service-training",
+  "version": "1.0.0",
+  "description": "RESTful API in python - returns training records",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon training.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wozitech-cv/service-training.git"
+  },
+  "keywords": [
+    "python3",
+    "REST",
+    "RESTful",
+    "flask"
+  ],
+  "author": "Warren Ayling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wozitech-cv/service-training/issues"
+  },
+  "homepage": "https://github.com/wozitech-cv/service-training#readme",
+  "dependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
